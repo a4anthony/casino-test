@@ -7,7 +7,7 @@ require "contrib/php-fpm.php";
 
 // Config
 
-set("repository", "git@github.com:kuponify/backend-api.git");
+set("repository", "git@github.com:a4anthony/casino-test.git");
 set("php_fpm_version", "8.2");
 
 // add("shared_files", []);

@@ -5,3 +5,12 @@
 [x-cloak] {
     display: none;
 }
+
+@layer components {
+    .animate {
+        @apply transition-all duration-500 ease-in-out;
+    }
+    button:disabled {
+        @apply bg-opacity-90 hover:!bg-opacity-90 cursor-not-allowed;
+    }
+}

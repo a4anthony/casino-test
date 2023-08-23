@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::middleware("auth:sanctum")->get("/user", function (Request $request) {
     return $request->user();
 });
+
+Route::get("slot/spin", [\App\Http\Controllers\SlotController::class, "spin"]);
+Route::post("slot/spin", [\App\Http\Controllers\SlotController::class, "spin"]);
+Route::get("slot/spin/{batchId}", [
+    \App\Http\Controllers\SlotController::class,
+    "progress",
+]);
